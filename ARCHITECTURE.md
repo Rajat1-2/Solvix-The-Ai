@@ -1,8 +1,8 @@
-# Kifaru Architecture
+# Solvix Architecture
 
 ## Overview
 
-Kifaru is a multi-service AI application with a React frontend, a Node.js gateway, separate backend services for auth, chat, billing, and agent orchestration, plus a dedicated FastAPI rag service for PDF question answering.
+Solvix is a multi-service AI application with a React frontend, a Node.js gateway, separate backend services for auth, chat, billing, and agent orchestration, plus a dedicated FastAPI rag service for PDF question answering.
 
 The system is organized so the frontend talks to one public entrypoint, the gateway. The gateway authenticates the user, attaches the user context to internal requests, and forwards traffic to the correct backend service. PDF chat is handled separately by the rag service, which keeps the document ingestion and retrieval pipeline isolated from the general agent stack.
 
